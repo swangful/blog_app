@@ -1,0 +1,125 @@
+@import "bootstrap";
+
+/* universal */
+
+address {
+  text-align: center;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  color: #fff;
+}
+
+table {
+  color: #fff;
+}
+
+.table-hover {
+  color: #848484;
+}
+.p12 {
+  text-align: center;
+}
+
+.hph1 {
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+body {
+  padding-top: 60px;
+  background-image: url(night.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+footer small {
+  float: left;
+  color: #000;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+  color: #000;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+  color: #000;
+}
+
+/*!
+ * Bootstrap v3.1.1 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */

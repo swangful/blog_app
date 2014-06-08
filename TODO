@@ -1,0 +1,90 @@
+- Controller Specs: overkill it, write a lot. 
+- Routing Specs
+
+require 'spec_helper'
+
+describe Class do
+end
+
+Write controller > Routing then models?
+
+3/27
+finish controller specs
+then start index? 
+sign in active records etc
+
+WATIR, postgress?
+
+4/10
+finish specs
+@users = assigns(:user)
+finish connecting databases user > post > comment
+has_many, belongs_to 
+spec test the relationships if time allows.
+
+4/24
+add index to all ID's add_index
+add specs to relationships spec/models/user_spec.rb 
+		- finished specs for post_spec and user_spec. playing around with migrations to 
+		add correct relationship attributes. 
+		- what is a foriegn key?
+		- include options?
+		- search for austin in notes
+
+5/2
+Finished, failing. add index to all ID's add_index
+Finished, failling hard. Try to fill out all the routing specs
+Finished, failing. post/comment failing, User passing 
+Finished, re-do all the relationship specs
+Finished, make sure to have specs for any validation
+
+need new route for comments under a user
+need a routing spec
+need a controller spec
+need a new controller action for users#comments
+need a new view
+
+5/16
+# sign in form 						:)
+# should have just an email 		:)
+#
+# create empty sign_in_controller 	:)
+#
+# create routing specs for 	:)
+# get: sign_in/new :)
+# post: sign_in # create :)
+#
+# in  sign_in controller :)
+# create def new :)
+# create template behind it (empty) :)
+# 
+#create a controller spec.. should render successfully :)
+# should render_template 'new' :(
+#
+# then start filling out the views :)
+# in the views :)
+# form_tag {controller: 'sign_in', action: 'create'}, method :post do :(
+# email_form_tag :)
+#
+# fill out create controller specs
+# 
+# it "given a valid user email"
+# should have flash[:notification] "you have signed in"
+# and should be redirected_to root_path
+# it 'given an email that doesn't exist'
+# it should render :new
+# it should be success
+#
+# sign_in_controller create
+# params[:email]
+# @user = User.find(params[:email])
+# session[:user] = @user
+# 
+#
+# create a new controller call it the sign_in controller
+# 
+# finish fixing routing specs :)
+# fix model specs
+
+5/23 
+Ruby Koans
