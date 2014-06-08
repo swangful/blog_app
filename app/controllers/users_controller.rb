@@ -7,9 +7,11 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # GET /users/1
+  # GET /users/ 
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   # GET /users/new
@@ -24,6 +26,9 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    # user_parmas = params[:user]
+    # {user: {name: 'ray', email: 'foo'}}
+    # User.new(params[:user])
     @user = User.new(user_params)
 
     respond_to do |format|
@@ -69,6 +74,8 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
+      # {id: user.id}
+      # {user: {name: 'asdf', email: 'asdf@asdf.com'}}
       params.require(:user).permit(:name, :email)
     end
 end

@@ -1,2 +1,32 @@
-<h1>Hello, Steve Wang.</h1>
-<%= link_to "My Blog", controller: "posts" %>
+<!DOCTYPE html>
+<html>
+	<head>
+	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <link type="text/css" rel="stylesheet" href="application.css"/>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+	</head>
+    <title>My Blog</title>
+<body>
+ 	<div class="inner cover">
+        <br></br><br></br><br>
+    	<h1 class="hph1">Hello World</h1>
+        <br>
+    	<p class="lead">Two words that start every developer's career path. 
+
+            <br><br>Welcome to my blog that dives into my journey creating my first rails app using bootstrap and the Michael Hartl tutorial on Rails 3. I will go into detail about my experiences, struggles, and accomplishments learning about rails web app development. Please sign up and follow my journey!</p>
+        <p class="lead">
+        <%= link_to "Login", '/login', class: "btn btn-lg btn-primary" %>
+ 		<%= link_to "Sign up", '/signup', class: "btn btn-default" %></p>
+        <br>
+    </div>
+	</body>
+</html>
+
+
+
+
+
+
+
