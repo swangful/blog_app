@@ -8,7 +8,7 @@ end
  
 def create
   @post = Post.new(params[:post].permit(:title, :text))
- 
+  @post.user = current_user
   if @post.save
     redirect_to @post
   else

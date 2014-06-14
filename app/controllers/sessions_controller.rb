@@ -7,15 +7,17 @@ class SessionsController < ApplicationController
 		user = User.where({email: params[:session][:email]}).first
 
 		if user
-			session[:user] = user.id
+			session[:current_user_id] = user.id
+			redirect_to posts_path, :flash => { :error => "You have successfully logged in."}
 		else
 			redirect_to signup_path, :flash => { :error => "Please sign up to continue." }
 		end
 	end
 
 	def destroy
-		session[:user] = nil
-    	redirect_to root_path
+		session[:current_user_id] = nil
+		
+    	redirect_to root_path, :flash => { :error => "You have been successfully logged out."}
 	end
 end
 

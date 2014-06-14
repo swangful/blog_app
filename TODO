@@ -88,3 +88,9 @@ need a new view
 
 5/23 
 Ruby Koans
+
+6/13
+_header.html.erb line 14, why cant i use a symbol :current_user
+big O explanation? 
+finish up sessions, login/logout view, helper method.
+
