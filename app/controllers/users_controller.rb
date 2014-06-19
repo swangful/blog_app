@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @post = Post.find(params[:id])
+    #@post = Post.find(params[:id]) 
   end
 
   # GET /users/new
@@ -76,6 +76,6 @@ class UsersController < ApplicationController
     def user_params
       # {id: user.id}
       # {user: {name: 'asdf', email: 'asdf@asdf.com'}}
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516002007) do
+ActiveRecord::Schema.define(version: 20140617211137) do
 
   create_table "comments", force: true do |t|
     t.string   "commenter"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20140516002007) do
     t.integer  "post_id"
     t.integer  "comment_id"
     t.integer  "micropost_id"
+    t.string   "password"
   end
 
   add_index "users", ["email"], name: "index_users_on_email"

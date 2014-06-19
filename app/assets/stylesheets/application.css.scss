@@ -45,7 +45,7 @@ h1 {
 
 body {
   padding-top: 60px;
-  background-image: url(night.jpg);
+  background-image: url(<%= image_path('night.jpg') %>);
   background-size: cover;
   color: #fff;
 }
