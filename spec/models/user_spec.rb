@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe User do
+	include UsersHelper
 
 	it "should have_many posts" do
-		user = User.create({email: 'swang@swang.com', name: "Steve Wang"})
+		user = User.create({email: 'swang@swang.com', name: "Steve Wang", password: 'password'})
 		post = Post.create({title: 'testing rspec test', text: "testing"})
 		user.posts << post
 		user.save
@@ -11,7 +12,7 @@ describe User do
 	end
 
 	it "should have_many comments" do 
-		user = User.create({email: 'swang@swang.com', name: "Steve Wang"})
+		user = User.create({email: 'swang@swang.com', name: "Steve Wang", password: 'password'})
 		post = Post.create({title: 'testing rspec test', text: "testing"})
 		comment = Comment.create({commenter: 'swang', body: 'This is a comment.'})
 		user.comments << comment
@@ -20,7 +21,7 @@ describe User do
 	end
 
 	it "should create a user" do
-		user = User.create({email: 'foobar@foobar.com', name: "Ray Chen"})
+		user = User.create({email: 'foobar@foobar.com', name: "Ray Chen", password: 'password'})
 		expect(user).to be_kind_of(User) # be_*
 		expect(user.reload.email).to eql('foobar@foobar.com')
 		expect(user.reload.name).to eql('Ray Chen')
@@ -54,6 +55,16 @@ describe User do
 
 	it "is invalid without a name" do
 		user = User.new
+		expect(user).to_not be_valid
+	end
+
+	it "should have a password with minimum length of 6 characters" do
+		user = User.create({email: 'swang@swang.com', name: "Steve Wang", password: 'word'})
+		expect(user).to_not be_valid
+	end
+
+	it "should have a matching password confirmation" do
+		user = User.create({email: 'swang@swang.com', name: "Steve Wang", password: 'password', password_confirmation: 'pass'})
 		expect(user).to_not be_valid
 	end
 end

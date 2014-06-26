@@ -1,4 +1,5 @@
 BlogApp::Application.routes.draw do
+  get "password_resets/new"
   get "welcome/index"
   
   match '/about', to: 'static_pages#about', via: 'get'
@@ -6,6 +7,7 @@ BlogApp::Application.routes.draw do
   match '/faq', to: 'static_pages#faq', via: 'get'
   match '/resources', to: 'static_pages#resources', via: 'get'
 
+  resources :password_resets
   resources :users do
     member do
       get :comments

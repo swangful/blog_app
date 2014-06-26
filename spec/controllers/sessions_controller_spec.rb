@@ -15,7 +15,7 @@ describe SessionsController do
 
 	describe 'post create' do
 		let :user do
-			User.create({email: 'foobar@foobar.com', name: "Ray Chen"}) 
+			User.create({email: 'foobar@foobar.com', name: "Ray Chen", password: 'password'}) 
 		end
 
 		it "should find user and assign session[:user] to that user_id" do

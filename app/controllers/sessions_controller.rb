@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 	def create
 		user = User.where({email: params[:session][:email]}).first
 
-		if user
+		if user && user.is_password?(params[:session][:password])
 			session[:current_user_id] = user.id
 			redirect_to posts_path, :flash => { :error => "You have successfully logged in."}
 		else

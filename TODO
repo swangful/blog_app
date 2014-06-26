@@ -94,3 +94,19 @@ _header.html.erb line 14, why cant i use a symbol :current_user
 big O explanation? 
 finish up sessions, login/logout view, helper method.
 
+6/20 forgot password:
+
+ - in your user database... create a field: forgot_password_token (put an index on this)
+ - forgot password controller
+
+ ... new form with the email.
+	... edit (takes in a token) and finds that user with that token and allows password reset.
+
+ - if someone says forgot password.... create a token on that user.... 
+
+ spec stuff
+
+ # fixed a typo, hexidigest, hexdigest. 
+ # spec'd user model, added 2 tests for password
+ # trying to fix failures, seems like i have to create a login session for posts controller to pass? currently failing 
+ # failed terribly creating password...
